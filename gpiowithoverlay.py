@@ -20,7 +20,7 @@ try:
 	#the next four blocks are used for toggeling between the camera views.
       	if GPIO.input(RearView_Switch)==0 and run == 0:
 		print "  Started Full screen"
-         	rpistr = "python /boot/crankshaft/camera.py"
+         	rpistr = "python /boot/crankshaft/back-camera.py"
          	p=subprocess.Popen(rpistr,shell=True, preexec_fn=os.setsid)
          	run = 1
          	while GPIO.input(RearView_Switch)==0:
